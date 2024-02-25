@@ -24,10 +24,11 @@ void bubble_sort(int *array, size_t size)
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
 				print_array(array, size);
+				swapped = 1; /*  Set flag to indicate a swap occurred*/
 			}
 		}
 		/*If no swaps occurred, the array is already sorted*/
-		if (swapped == 0)
+		if (!swapped)
 		{
 			break;
 		}
